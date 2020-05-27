@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清楚浮动</title>
+    <style>
+      .container {
+        width: 990px;
+        background-color: #f00;
+        margin: 0 auto;
+      }
+
+      .wrap {
+        margin-right: -10px;
+      }
+
+      .item {
+        float: left;
+
+        margin-right: 10px;
+        width: 240px;
+        background-color: orange;
+      }
+
+      .itema {
+        height: 306px;
+      }
+
+      .itemb {
+        height: 148px;
+      }
+
+      .item-last {
+        margin-top: 10px;
+      }
+
+      /* 清除浮动 1 
+      .clear-fix {
+        clear: both;
+      }*/
+
+      /* 费代码：清除浮动 3 
+      费代码：比如其它也要清除了.. 
+      .container::after {         
+        content: "";
+        clear: both; 
+        display: block; 
+      }
+      
+      .content::after {
+        content: "";
+        clear: both;
+        display: block; 
+      }
+      .bran::after {
+        content: "";
+        clear: both;
+        display: block; 
+      }*/
+
+      /* 推荐：清除浮动 4  谁需要给谁加*/
+      .clear-fix::after {
+        /* 伪元素必须有content  */
+        content: "";
+        clear: both;
+        /* 默认不是整行 */
+        display: block;
+
+        /* 兼容旧浏览器 */
+        height: 0;
+        visibility: hidden;
+      }
+
+      .clear-fix {
+        /* 兼容IE6 和 7 */
+        *zoom: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container clear-fix">
+      <div class="wrap">
+      <div class="item itema"></div>
+        <div class="item itema"></div>
+
+        <div class="item itemb"></div>
+        <div class="item itemb"></div>
+        <div class="item itemb item-last"></div>
+        <div class="item itemb item-last"></div>
+      </div>
+      <!-- 清除浮动 2 
+      在父元素最后增加一个br标签：<br clear="all">
+         会增加很多无意义的空标签，维护麻烦
+         违反了结构与样式分离的原则（不推荐）
+      
+      <br clear="all">-->
+    </div>
+
+    <!-- 清除浮动 1
+      在父元素后增加一个空的块级子元素，并且让它设置clear:both
+        会增加很多无意义的空标签，维护麻烦
+        违反了结构与样式分离的原则  不推荐
+   
+    <div class="clear-fix"></div> -->
+
+    <p>其他内容</p>
+    <p>其他内容</p>
+    <p>其他内容</p>
+    <p>其他内容</p>
+    <p>其他内容</p>
+    <p>其他内容</p>
+    <p>其他内容</p>
+    <p>其他内容</p>
+  </body>
+</html>

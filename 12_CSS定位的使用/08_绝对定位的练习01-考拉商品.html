@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位的练习01-考拉商品</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+      /* 第一步 */
+      .beauty-left {
+        position: relative;
+        background-color: #f00;
+        display: inline-block;
+      }
+
+      /* 第二步 */
+      .beauty-left ul {
+        position: absolute;
+        bottom: 30px; /* 离下 */
+        width: 285px; /* 宽度 */
+
+        /* 第六步 等分 */
+        text-align: justify;
+        text-align-last: justify;
+
+        /* 第五步 居中显示 */
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+
+      /* 第三步 */
+      .beauty-left ul li {
+        display: inline-block; 
+      }
+
+      /* 第四步 */
+      .beauty-left ul li a {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        line-height: 40px; /* 行高上下居中 */
+        margin-top: 10px; /* 离上间距10px */
+        font-size: 12px; 
+
+        text-align: center; /* 文字居中 */
+        text-align-last: center;/* 解决文字等分 */
+
+        border: 1px solid #eaeaea;
+        border-radius: 40px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+        background-color: #fff;
+      }
+
+      /* 第七步 */
+      .beauty-left ul li a:hover {
+        color: #ff1e32;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="beauty-left">
+      <a href="#">
+        <img src="./img/beauty-left-img.jpg" alt="">
+      </a>
+      <ul>
+        <li><a href="#">精致护肤</a></li>
+        <li><a href="#">人气面膜</a></li>
+        <li><a href="#">大牌彩妆</a></li>
+        <li><a href="#">防晒修护</a></li>
+        <li><a href="#">迷人香氛</a></li>
+        <li><a href="#">面步精华</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

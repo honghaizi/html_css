@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位的练习02-下拉二维码</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+      .phone {
+        position: relative;
+
+         /* 为了能看到下拉出来的内容 */
+        margin-left: 300px;
+      }
+
+      /* .phone>span {
+        font-size: 12px;
+      } */
+
+      .phone .code {
+        display: none;
+        position: absolute;
+        top: 29px;
+        /* 居中 */
+        left: 0;
+        transform: translate(-50%);
+        margin-left: 50%;
+
+        padding: 5px 5px 0;  /* 设置内边距 */
+        border: 1px solid #aaa;  /* 设置边框 */
+      }
+
+      /* 微调图片距离 */
+      .phone .code img {
+        margin-bottom: 3px;
+      }
+
+      /* 文字居中显示 */
+      .phone .code span {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      /* 小箭头 */
+      .arrow {
+        position: absolute;
+        top: -5.2px;
+
+        /* 居中 */
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+
+        border-top: 1px solid #aaa;
+        border-left: 1px solid #aaa;
+
+        transform: rotate(45deg);
+      }
+
+      /* 点击效果 */
+      .phone span:hover+.code {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="phone" href="#">
+      <span>手机考拉</span>
+      <span class="code">
+        <span class="arrow"></span>
+        <img src="./img/qrcode.png" alt="">
+        <span>下载APP</span>
+        <span>领1000元忽悠礼包</span>
+      </span>
+    </a>
+
+    <!-- <div class="arrow"></div> -->
+  </body>
+</html>

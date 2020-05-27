@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位的练习-考拉侧栏</title>
+    <style>
+      /* CSS reset 初始化代码 */
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      /* 具体的样式 */
+      /* 第一步设置整体 */
+      .right-aside {
+        position: fixed;
+        top: 100px;
+        right: 30px;
+        
+        /* 第三步设置外边框线 */
+        border: 1px solid #eaeaea;
+      }
+
+      /* 第二步设置具体内容 */
+      .right-aside a {
+        display: block;/* 单行显示 */
+        /* 设置大小 */
+        width: 62px;
+        height: 48px;
+
+        /* 内部间距 */
+        padding-top: 12px;
+
+        /* 设置文字 */
+        font-size: 12px;
+        text-align: center;
+
+        /* 第三步设置内边框线 */
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      /* 第五部设置图标 */
+      .right-aside a i {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin: 0 auto 3px; /* 上为0 左右居中 下3*/
+        /* background-color: #f00; */
+      }
+
+      /* 第七部效果 */
+      .right-aside a:hover {
+        background-color: #f6f6f6;
+      }
+
+      /* 第六步加入图片 */
+      .right-aside a i.sign-in {
+        background-image: url("./img/icon-aside-right-signin.png");
+      }
+      .right-aside a:hover i.sign-in {
+        background-image: url("./img/icon-aside-right-signin-active.png");
+      }
+
+      .right-aside a i.cart {
+        background-image: url("./img/icon-aside-right-cart.png");
+      }
+      .right-aside a:hover i.cart {
+        background-image: url("./img/icon-aside-right-cart-active.png");
+      }
+
+      .right-aside a i.app {
+        background-image: url("./img/icon-aside-right-phone.png");
+      }
+      .right-aside a:hover i.app {
+        background-image: url("./img/icon-aside-right-phone-active.png");
+      }
+      
+      .right-aside a i.top {
+        /* 第四步取消最后的下边线 */
+        border-bottom: none;        
+        background-image: url("./img/icon-aside-right-top.png");
+      }
+      .right-aside a:hover i.top {
+        background-image: url("./img/icon-aside-right-top-active.png");
+      }
+
+      /* 文字效果 */
+      .right-aside a:hover span.txtet {
+        color: #ff1e32;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <div class="right-aside">
+      <a href="#">
+        <i class="sign-in"></i>
+        <span class="txtet">签到</span>
+      </a>
+      <a href="#">
+        <i class="cart"></i>
+        <span class="txtet">购物车</span>
+      </a>
+      <a href="#">
+        <i class="app"></i>
+        <span class="txtet">APP</span>
+      </a>
+      <a href="#">
+        <i class="top"></i>
+        <span class="txtet">TOP</span>
+      </a>
+    </div>
+  </body>
+</html>

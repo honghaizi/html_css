@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_vertical-align的使用-一个行盒.html</title>
+    <style>
+      .box {
+        background-color: orange;
+      }
+
+      strong {
+        background-color: #0f0;
+      }
+
+      .i-box {
+        display: inline-block;
+        height: 300px;
+        width: 100px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 行盒的作用是必须把行盒中的内容包裹起来 所以行盒就存在高度了 -->
+    <div class="box">
+      普通文本xxxxlyxxg
+      <img src="../img/test_01.webp" alt="">
+      <strong>strong元素</strong>
+
+      <span class="i-box">spaxxxxx xx nx xx x x x xxxx</span>
+    </div>
+  </body>
+</html>
