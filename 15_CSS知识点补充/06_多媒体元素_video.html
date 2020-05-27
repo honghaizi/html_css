@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多媒体元素_video</title>
+  </head>
+  <body>
+    <!-- <img src="../img/bd_logo1.png" alt=""> -->
+
+    <!-- 
+      视频是有格式的: mp4/avi/webm...
+      controls：增加控制工具栏
+      autoplay：自动播放，但是存在兼容性问题
+      muted：静音，增加后不静音并且自动播放会生效
+      loop：循环播放
+
+      <source>元素
+        如果存在兼容性问题，可以将多个视频格式的数据源放到source元素中
+        src：通过src指定数据的来源
+    -->
+    <video src="http://vfx.mtime.cn/Video/2019/05/30/mp4/190530103807409887.mp4" controls autoplay muted loop></video>
+
+    <video controls>
+      <source src="http://vfx.mtime.cn/Video/2019/05/30/mp4/190530103807409887.mp4">
+      <source src="http://vfx.mtime.cn/Video/2019/05/30/mp4/190530103807409887.avi">
+      <source src="http://vfx.mtime.cn/Video/2019/05/30/mp4/190530103807409887.webm">
+    </video>
+  </body>
+</html>

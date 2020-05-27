@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem单位的使用</title>
+    <style>
+
+      html {
+        font-size: 30px;
+      }
+
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: orange;
+
+        font-size: 12px;
+      }
+
+      .box {
+        color: #fff;
+
+        /* rem相对的是根元素的大小 */
+        width: 20rem;
+        /* width: 100px; */
+        height: 100px;
+        background-color: #f00;
+
+        /* 字体设置 */
+        /* rem: root em 相对于根元素 */
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">我是文本</div>
+    </div>
+  </body>
+</html>

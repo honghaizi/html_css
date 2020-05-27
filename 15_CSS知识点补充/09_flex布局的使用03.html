@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局的使用</title>
+    <style>
+
+      .box {
+        width: 500px;
+        height: 400px;
+        background-color: orange;
+        
+        display: flex;
+
+
+        /* 4.align-items: 绝对flex items在交叉轴的对齐方式 */
+        /* normal：在弹性布局中，效果和stretch一样
+          stretch：当 flex items 在 cross axis 方向的 size 为 auto 时，会自动拉伸至填充 flex container
+        */
+        /* align-items: stretch; */
+
+        /* flex-start：与 cross start 对齐  flex-end：与 cross end 对齐 */
+        /* align-items: flex-start; */
+
+        /* center：居中对齐 */
+        /* align-items: center; */
+
+        /* baseline：与基准线对齐   多行文字最上面一行对齐  不是最底*/
+        align-items: baseline;
+        
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        /* line-height: 100px; */
+        color: #fff;
+        
+      }
+
+      .item1 {
+        background-color: #f00;
+        height: 60px;
+        /* 基线 */
+        font-size: 50px;
+      }
+      .item2 {
+        background-color: yellowgreen;
+        height: 150px;
+      }
+      .item3 {
+        background-color: #00f;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item item1">item1</div>
+      <div class="item item2">item2 item2 item2 item2 item2 item2</div>
+      <div class="item item3">item3</div>
+    </div>
+
+    <strong>strong</strong>
+  </body>
+</html>

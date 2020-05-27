@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局的使用</title>
+    <style>
+    .box {
+      width: 550px;
+      height: 400px;
+      background-color: orange;      
+
+      display: flex;
+
+    }
+
+    .item {
+      width: 250px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color: #fff;        
+    }
+
+    /* flex-shrink 决定了 flex items 如何收缩
+      可以设置任意非负数字（正小数、正整数、0），默认值是 1
+      当 flex items 在 main axis 方向上超过了 flex container 的 size，flex-shrink 属性才会有效
+
+    */
+
+    .item1 {
+      background-color: #f00;
+      /* flex-grow: .2; */
+      /* 默认 */
+      flex-shrink: 2;
+    }
+
+    .item2 {
+      background-color: yellowgreen;
+      /* flex-grow: .2; */
+      flex-shrink: 2;
+    }
+
+    .item3 {
+      background-color: #00f;
+      /* flex-grow: .3; */
+      flex-shrink: 1;
+    }
+  </style>
+  <!-- 
+   -->
+  </head>
+  <body>
+    <div class="box">
+      <div class="item item1">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item3">item3</div>
+    </div>
+    <strong>strong</strong>
+  </body>
+</html>

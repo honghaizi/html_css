@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a元素的高度</title>
+    <style>
+      a img {
+        position: relative;
+
+        /* z-index: 9; 正常a元素被撑起*/
+
+        /* -数时 不被撑起 */
+        z-index: -9;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">
+      <img src="../img/bd_logo1.png" alt="">
+    </a>
+  </body>
+</html>

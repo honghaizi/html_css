@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络字体使用</title>
+    <style>
+      /* 指定使用网络字体 */
+      @font-face {
+        /* 自定义名 */
+        /* font-family: zhishan; 可以不用双引号 */
+        font-family: "zhishan";
+        /* 字体路径   url指定多个多种备用*/
+        src: url("./font/ZhiMangXing-Regular.ttf"),
+             url("./font/ZhiMangXing-Regular.otf"),
+             url("./font/ZhiMangXing-Regular.otf"),
+             url("./font/ZhiMangXing-Regular.otf");
+      }
+
+      @font-face {
+        font-family: "test";
+        src: url("./font/test01.ttf");
+      }
+
+      p {
+         /* 使用系统自带的字体 */
+         /* font-family: Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,\5FAE\8F6F\96C5\9ED1,tahoma,simsun,\5b8b\4f53; */
+         
+         /* 普通系统自带使用 */
+         /* font-family: simsun; */
+
+         /* 使用网络字体 */
+         font-family: zhishan;
+      }
+
+      strong {
+        font-family: "test";
+      }
+
+      /* span {
+        font-weight: 700;
+      } */
+    </style>
+  </head>
+  <body>
+    <p>我是一个段落，你好啊，我齐天大圣</p>
+    <strong>U你好啊，我是猪八戒</strong>
+    <br>
+    <span>Y你好啊，我是猪八戒</span>
+
+    <br>
+
+    <!-- 图片马赛克因为是像素，字体放大不会 -->
+    <span>我 > </span>
+    <img src="../img/wall.png" alt="">
+  </body>
+</html>

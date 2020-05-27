@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate的百分比</title>
+    <style>
+      strong {
+        /* 转为行内块级元素 */
+        display: inline-block; 
+        transform: translate(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <span>span元素</span>
+    
+
+    <strong>strong元素，transform元素对于行内元素是无效的</strong>
+  </body>
+</html>

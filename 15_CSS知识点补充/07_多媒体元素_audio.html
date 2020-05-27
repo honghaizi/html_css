@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多媒体元素_audio</title>
+  </head>
+  <body>
+    <!-- 
+      controls：增加控制工具栏
+      autoplay：自动播放，但是存在兼容性问题
+      muted：静音
+      loop：循环播放
+
+      <source>元素
+        如果存在兼容性问题，可以将多个视频格式的数据源放到source元素中
+        src：通过src指定数据的来源
+     -->
+    <audio src="https://music.163.com/song/media/outer/url?id=33894312.mp3" controls autoplay muted loop></audio>
+
+    <audio controls>
+      <source src="https://music.163.com/song/media/outer/url?id=33894312.mp3">
+    </audio>
+  </body>
+</html>
