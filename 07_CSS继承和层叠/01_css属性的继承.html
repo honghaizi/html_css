@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css属性的继承</title>
+    <style>
+      .box {
+        color:#f00;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: #00f;
+        width: 500px;
+      }
+
+      img {
+        width: 100%;
+
+        /* 强制继承 */
+        /* width: inherit; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>哈哈哈哈哈</p>
+      <div><strong>呵呵呵呵呵</strong></div>
+      <img src="../img/bd_logo1.png" alt="">
+    </div>
+  </body>
+</html>
