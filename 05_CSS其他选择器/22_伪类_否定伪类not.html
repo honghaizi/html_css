@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>否定伪类</title>
+    <style>
+       /* 除了div之外,所有的元素 */
+       /* body :not(p) {
+          color: red;
+        } */
+
+        :not(html) :not(body):not(div) {
+          color: red;
+        }
+        /**/
+        body :not(body):not(div) {
+          font-size: 20px;
+        }
+
+        div :not(body):not(div) {
+          background-color: rgb(55, 172, 31);
+        } 
+
+        .p2 {
+          color: gold;
+        }
+    </style>
+  </head>
+  <body>
+    <div>文字内容1</div>
+
+    <p class="p2">文字内容2</p>
+
+    <span class="text">文字内容3</span>
+    <div>文字内容4</div>
+
+    <div>
+      <span>哈哈哈哈</span>
+    </div>
+  </body>
+</html>

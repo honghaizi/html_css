@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+      /* title属性值以单词one结尾的元素 */
+      [title$="one"] {
+        color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div title="one">文字内容1</div>
+    <div title="testone">文字内容2</div>
+    <div title="two one">文字内容3</div>
+    <div title="two-one">文字内容4</div>
+    <div title="two_one">文字内容5</div>
+  </body>
+</html>
+

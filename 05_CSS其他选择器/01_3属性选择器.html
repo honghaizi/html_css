@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+      /* title属性值包含单词one的元素 */
+      [title*="one"] {
+        color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div title="one">我是div元素</div>
+    <p title="twoone">我是p元素</p>
+    <p title="two one">我也是p元素</p>
+    <p title="two_one">我也是p元素</p>
+    <span title="two-one">我是span元素</span>
+  </body>
+</html>
+

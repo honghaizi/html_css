@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交集选择器(重要)</title>
+    <!-- 
+      所有同时符合3个条件的元素：div元素、class值有one、title属性值等于test
+     -->
+    <style>
+      .one[title="text"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">文字内容1</div>
+    <p class="one" title="text">文字内容2</p>
+    <span class="one">文字内容3</span>
+    <div class="one" title="text">文字内容4</div>
+    <div title="text">文字内容5</div>
+  </body>
+</html>

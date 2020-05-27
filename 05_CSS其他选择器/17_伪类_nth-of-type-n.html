@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类_nth-of-type-n</title>
+    <style>
+      /* p:nth-child(2n) {
+        color: red;
+      } */
+
+      /* 2 4 6 8 .. */
+      p:nth-of-type(2n) {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>我是div元素</div>
+      <p>文字内容1</p>
+      <span>我是span元素</span>
+      <p>文字内容2</p>
+      <p>文字内容3</p>
+      <p>文字内容4</p>
+      <p>文字内容5</p>
+      <p>文字内容6</p>
+      <p>文字内容7</p>
+      <p>文字内容8</p>
+      <p>文字内容9</p>
+  </body>
+</html>

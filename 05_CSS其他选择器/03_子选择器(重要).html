@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子选择器</title>
+    <style>
+      /* div元素里面的直接span子元素（不包括间接子元素） */
+      div>span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <span>文字内容1</span>
+    <div>
+      <span>文字内容2</span>
+    </div>
+    <div>
+      <p>
+        <span>文字内容3</span>
+        <strong>
+          <span>文字内容4</span>
+        </strong>
+      </p>
+    </div>
+    <p>
+      <span>文字内容5</span>
+    </p>    
+  </body>
+</html>

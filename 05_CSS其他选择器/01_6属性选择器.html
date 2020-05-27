@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+      /* title属性值包含单词one的元素（单词one与其他单词之间必须用空格隔开）*/
+      [title~="one"] {
+        color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div title="testonetwo">文字内容1</div>
+    <div title="testone two">文字内容2</div>
+    <div title="test one two">文字内容3</div>
+    <div title="test one">文字内容4</div>
+    <div title="one two">文字内容5</div>
+    <div title="one-two">文字内容6</div>
+    <div title="one_two">文字内容7</div>
+    <div title="one">文字内容8</div>
+    <div title="two">文字内容9</div>
+  </body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+      /* 
+        title属性值恰好等于one 或者 以单词one开头且后面紧跟着连字符-的元素
+      */
+      [title|="one"] {
+        color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div title="test one two">文字内容1</div>
+    <div title="test-one">文字内容2</div>
+    <div title="one two">文字内容3</div>
+    <div title="one-two">文字内容4</div>
+    <div title="one_two">文字内容5</div>
+    <div title="one">文字内容6</div>
+    <div title="two">文字内容7</div>
+  </body>
+</html>
+
